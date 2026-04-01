@@ -6,11 +6,9 @@ import rocket from "../../assets/rocket.png"
 const Steps = () => {
     return (
         <div className='bg-[#F9FAFC]'>
-            <div className='w-10/12 mx-auto py-25 space-y-5'>
+            <div className='w-9/12 mx-auto py-25 space-y-5'>
                 <h2 className='text-4xl font-bold text-center'>Get Started in 3 Steps</h2>
-                <p className='text-sm text-gray-400 text-center'>
-                Start using premium digital tools in minutes, not hours.
-                </p>
+                <p className='text-sm text-gray-400 text-center'>Start using premium digital tools in minutes, not hours.</p>
 
                 <div className='grid md:grid-cols-3 gap-7'>
 
