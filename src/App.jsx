@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Counter from './components/Counter/Counter'
@@ -15,13 +16,14 @@ const loadProducts = async () => {
 }
 const productPromise = loadProducts()
 function App() {
+  const [cartItems, setCartItems] = useState([])
 
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar cartItems={cartItems}></Navbar>
       <Banner></Banner>
       <Counter></Counter>
-      <Products productPromise={productPromise}></Products>
+      <Products productPromise={productPromise} cartItems={cartItems} setCartItems={setCartItems}></Products>
       <Steps></Steps>
       <Pricing></Pricing>
       <Workflow></Workflow>

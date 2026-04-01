@@ -3,10 +3,10 @@ import ProductCard from '../ProductCard/ProductCard';
 import CartCard from '../CartCard/CartCard';
 
 
-const Products = ({productPromise}) => {
+const Products = ({productPromise, cartItems,setCartItems}) => {
     const products = use(productPromise)    
     const [activeTab, setActiveTab] = useState("products")
-    const [cartItems, setCartItems] = useState([])
+    
     
     return (
         <div>
@@ -16,7 +16,7 @@ const Products = ({productPromise}) => {
                 <div className='flex justify-center items-center mb-10'>
                     <div className='flex justify-between items-center shadow-sm rounded-full p-1 gap-5'>
                         <button onClick={()=>setActiveTab("products")} className={` ${activeTab==="products" ? "btn btn-primary border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full px-6" : "cursor-pointer pl-2"} `}>Products</button>
-                        <button onClick={()=>setActiveTab("carts")} className={` ${activeTab==="carts" ? "btn btn-primary border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full px-6 " : "cursor-pointer pr-2"} `}>Cart (0)</button>
+                        <button onClick={()=>setActiveTab("carts")} className={` ${activeTab==="carts" ? "btn btn-primary border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full px-6 " : "cursor-pointer pr-2"} `}>Cart ({cartItems.length})</button>
                     </div>
                 </div>
 
