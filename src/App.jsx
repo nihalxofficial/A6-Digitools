@@ -8,6 +8,7 @@ import Pricing from './components/Pricing/Pricing'
 import Products from './components/Products/Products'
 import Steps from './components/Steps/Steps'
 import Workflow from './components/Workflow/Workflow'
+import { ToastContainer } from 'react-toastify'
 
 
 const loadProducts = async () => {
@@ -28,6 +29,8 @@ function App() {
       <Pricing></Pricing>
       <Workflow></Workflow>
       <Footer></Footer>
+
+      <ToastContainer />
 
     </div>
   )

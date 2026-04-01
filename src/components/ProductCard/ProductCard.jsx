@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { FaCheck } from "react-icons/fa6";
+import { toast } from 'react-toastify';
 
 const ProductCard = ({product,cartItems,setCartItems}) => {
     const [subscriptionState, setSubscriptionState] = useState(false)
     const handleSubscription = (product) => {
         const existProduct = cartItems.find(p => p.id === product.id)
         if(existProduct){
+            toast.error(`${product.name} is already in cart!`)
             return
         }else{
             setSubscriptionState(true)
             setCartItems([...cartItems, product])
+            toast.success(`${product.name} added to cart!`)
         }
     }
     console.log(cartItems);

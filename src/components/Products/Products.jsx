@@ -2,6 +2,7 @@ import React, { use, useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import CartCard from '../CartCard/CartCard';
 import { CiShoppingCart } from "react-icons/ci";
+import { toast } from 'react-toastify';
 
 
 
@@ -46,7 +47,9 @@ const Products = ({productPromise, cartItems,setCartItems}) => {
                             <p className='text-gray-400'>Total:</p>
                             <h2 className='font-semibold text-xl'>${totalPrice} </h2>
                         </div>
-                        <button onClick={()=>setCartItems([])} className='btn btn-primary border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full w-full'>Proceed to Checkout</button>
+                        <button onClick={()=>{
+                            setCartItems([])
+                            toast.success("Checkout Successful!")}} className='btn btn-primary border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full w-full'>Proceed to Checkout</button>
                     </div>}                    
                 </div>}
             </div>

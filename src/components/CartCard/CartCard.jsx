@@ -1,9 +1,11 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const CartCard = ({item,cartItems, setCartItems}) => {
     const deleteItem = (id) => {
         const deletedArray = cartItems.filter(item => item.id !== id)
         setCartItems(deletedArray)
+        toast.success(`${item.name} removed from cart!`)
     }
     return (
         <div className='flex justify-between items-center gap-4 bg-[#F9FAFC] border-none rounded-2xl p-5'>
