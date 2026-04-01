@@ -6,6 +6,7 @@ import CartCard from '../CartCard/CartCard';
 const Products = ({productPromise, cartItems,setCartItems}) => {
     const products = use(productPromise)    
     const [activeTab, setActiveTab] = useState("products")
+    const totalPrice = cartItems.reduce((sum, item) => (sum + item.price), 0)
     
     
     return (
@@ -29,15 +30,15 @@ const Products = ({productPromise, cartItems,setCartItems}) => {
 
                     {/* Cart Card */}
                     <div className='space-y-5'>
-                        {cartItems.map(item=> <CartCard key={item.id} item={item}></CartCard>)}
+                        {cartItems.map(item=> <CartCard key={item.id} item={item} cartItems={cartItems} setCartItems={setCartItems}></CartCard>)}
                     </div>
                     
 
                     <div className='flex justify-between items-center gap-4 my-6'>
                         <p className='text-gray-400'>Total:</p>
-                        <h2 className='font-semibold text-xl'>$<span>78</span> </h2>
+                        <h2 className='font-semibold text-xl'>${totalPrice} </h2>
                     </div>
-                    <button className='btn btn-primary border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full w-full'>Proceed to Checkout</button>
+                    <button onClick={()=>setCartItems([])} className='btn btn-primary border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full w-full'>Proceed to Checkout</button>
                 </div>}
 
 

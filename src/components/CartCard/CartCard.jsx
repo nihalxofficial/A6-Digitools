@@ -1,6 +1,10 @@
 import React from 'react';
 
-const CartCard = ({item}) => {
+const CartCard = ({item,cartItems, setCartItems}) => {
+    const deleteItem = (id) => {
+        const deletedArray = cartItems.filter(item => item.id !== id)
+        setCartItems(deletedArray)
+    }
     return (
         <div className='flex justify-between items-center gap-4 bg-[#F9FAFC] border-none rounded-2xl p-5'>
             <div className=' flex justify-between items-center gap-3'>
@@ -12,7 +16,7 @@ const CartCard = ({item}) => {
                     <p className=' text-gray-400'>${item.price}</p>
                 </div>
             </div>
-            <h2 className='text-red-400 font-semibold cursor-pointer'>Remove</h2>
+            <h2 onClick={()=>deleteItem(item.id)} className='text-red-400 font-semibold cursor-pointer'>Remove</h2>
         </div>
     );
 };
