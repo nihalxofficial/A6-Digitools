@@ -12,7 +12,7 @@ const Banner = () => {
                     <img src={bannerBadgeImg} alt="bannerBadgeImg" />
                     <h2 className='bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent'>New: AI-Powered Tools Available</h2>
                 </div>
-                <h2 className=' text-4xl lg:text-5xl font-bold leading-normal'>Supercharge Your <br /> Digital Workflow</h2>
+                <h2 className=' text-4xl lg:text-5xl font-bold leading-snug lg:leading-normal'>Supercharge Your <br /> Digital Workflow</h2>
                 <p className='text-gray-400 max-w-110'>Access premium AI tools, design assets, templates, and productivity software—all in one place. Start creating faster today. Explore Products</p>
                 <div className='flex justify-start items-center gap-3'>
                     <button className='btn btn-primary border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-2 px-3 rounded-full'>Explore Products</button>
