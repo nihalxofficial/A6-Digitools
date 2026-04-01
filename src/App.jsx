@@ -8,6 +8,12 @@ import Products from './components/Products/Products'
 import Steps from './components/Steps/Steps'
 import Workflow from './components/Workflow/Workflow'
 
+
+const loadProducts = async () => {
+  const res = await fetch("./Tools.json")
+  return res.json();
+}
+const productPromise = loadProducts()
 function App() {
 
   return (
@@ -15,7 +21,7 @@ function App() {
       <Navbar></Navbar>
       <Banner></Banner>
       <Counter></Counter>
-      <Products></Products>
+      <Products productPromise={productPromise}></Products>
       <Steps></Steps>
       <Pricing></Pricing>
       <Workflow></Workflow>
