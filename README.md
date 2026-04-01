@@ -59,5 +59,5 @@ Contextual notifications for every cart action — add, remove, and checkout
 Clicking "Buy Now" shows an "Added to cart" notification using React-Toastify.
 *Cart alerts for add, remove, and proceed to checkout actions.
 
-# Live Demo: Live Site Link: https://digitools-platform-react-ph.netlify.app/
+### Live Demo: Live Site Link: https://digitools-platform-react-ph.netlify.app/
 
