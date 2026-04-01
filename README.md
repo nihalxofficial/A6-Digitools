@@ -27,14 +27,17 @@ Tapping any product card bumps the cart counter in the Navbar right away
 Contextual notifications for every cart action — add, remove, and checkout
 
 
-⚡ Tech Stack
-Tool	What it does here
-React.js	Drives the entire frontend UI
-Tailwind CSS + DaisyUI	Keeps styling consistent and component-ready
-JavaScript (ES6+)	Handles all logic and interactivity
-React-Toastify	Delivers slick cart notifications
-JSON	Manages and serves all product data
-Features-- 1.Product Browsing & Cart Management.
+## ⚡ Tech Stack
+ 
+| Tool | Role in This Project |
+|---|---|
+| **React.js** | Core UI framework powering the entire frontend |
+| **Tailwind CSS + DaisyUI** | Utility-first styling with ready-made components |
+| **JavaScript (ES6+)** | All business logic and dynamic interactions |
+| **React-Toastify** | Lightweight, elegant toast notifications |
+| **JSON** | Local data layer for product storage and retrieval |
+ 
+---
 
 2.Users can view products in a 3-column layout. Add or remove items from the cart. Proceed to checkout clears all items.
 
