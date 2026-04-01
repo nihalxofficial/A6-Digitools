@@ -1,6 +1,8 @@
 import React, { use, useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import CartCard from '../CartCard/CartCard';
+import { CiShoppingCart } from "react-icons/ci";
+
 
 
 const Products = ({productPromise, cartItems,setCartItems}) => {
@@ -27,23 +29,27 @@ const Products = ({productPromise, cartItems,setCartItems}) => {
                 </div>
                 : <div className='shadow-sm rounded-2xl p-10'>
                     <h2 className='text-2xl font-bold mb-4'>Your Cart</h2>
-
-                    {/* Cart Card */}
-                    <div className='space-y-5'>
-                        {cartItems.map(item=> <CartCard key={item.id} item={item} cartItems={cartItems} setCartItems={setCartItems}></CartCard>)}
-                    </div>
                     
-
-                    <div className='flex justify-between items-center gap-4 my-6'>
-                        <p className='text-gray-400'>Total:</p>
-                        <h2 className='font-semibold text-xl'>${totalPrice} </h2>
+                    {cartItems.length <= 0 ?
+                     <div className='min-h-60 flex justify-center items-center'>
+                        <div className='text-center'>
+                            <h2 className='flex justify-center items-center'><CiShoppingCart className='text-7xl text-gray-400'/></h2>
+                            <h2 className='text-gray-400 text-xl mt-2'>Your cart is empty</h2>
+                        </div>
                     </div>
-                    <button onClick={()=>setCartItems([])} className='btn btn-primary border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full w-full'>Proceed to Checkout</button>
+                    : <div>
+                        <div className='space-y-5'>
+                            {cartItems.map(item=> <CartCard key={item.id} item={item} cartItems={cartItems} setCartItems={setCartItems}></CartCard>)}
+                        </div>
+        
+                        <div className='flex justify-between items-center gap-4 my-6'>
+                            <p className='text-gray-400'>Total:</p>
+                            <h2 className='font-semibold text-xl'>${totalPrice} </h2>
+                        </div>
+                        <button onClick={()=>setCartItems([])} className='btn btn-primary border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full w-full'>Proceed to Checkout</button>
+                    </div>}                    
                 </div>}
-
-
             </div>
-            
         </div>
     );
 };
