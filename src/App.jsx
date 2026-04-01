@@ -1,6 +1,7 @@
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Counter from './components/Counter/Counter'
+import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
 import Pricing from './components/Pricing/Pricing'
 import Steps from './components/Steps/Steps'
@@ -16,6 +17,7 @@ function App() {
       <Steps></Steps>
       <Pricing></Pricing>
       <Workflow></Workflow>
+      <Footer></Footer>
 
     </div>
   )
