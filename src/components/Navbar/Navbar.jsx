@@ -20,7 +20,7 @@ const Navbar = () => {
                         <span className='absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-1'>0</span>
                     </button>
                     <button className='cursor-pointer'>Login</button>
-                    <button className='btn btn-primary bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full'>Get Started</button>
+                    <button className='btn btn-primary border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full'>Get Started</button>
                 </div>
             </div>
             
