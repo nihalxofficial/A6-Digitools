@@ -1,3 +1,5 @@
+<img width="1226" height="508" alt="Screenshot 2026-04-10 090518" src="https://github.com/user-attachments/assets/fede1b85-1565-4a19-8448-207f43493ba3" />
+
 # 🛠️ DigiTools
 A modern subscription-based product platform where browsing, buying and managing your cart actually feels good.
 
@@ -58,6 +60,8 @@ Contextual notifications for every cart action — add, remove and checkout
 
 Clicking "Buy Now" shows an "Added to cart" notification using React-Toastify.
 *Cart alerts for add, remove and proceed to checkout actions.
+
+---
 
 ### Live Demo: Live Site Link: https://digitools-platform-react-ph.netlify.app/
 
